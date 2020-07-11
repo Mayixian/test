@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myx = {
+        sname: "myx",
+        sage: 22,
+      };
+      function clone(oldObj) {
+        var newObj = {};
+        for (var key in oldObj) {
+          newObj[key] = oldObj[key];
+        }
+        return newObj;
+      }
+      myx1 = clone(myx);
+      myx1.money = 100;
+      console.log(myx == myx1);
+      console.log(myx);
+      console.log(myx1);
+
+      var myx2 = {
+        sname: "myx",
+        sage: 23,
+        saddress: {
+          city: "hangzhou",
+          street: "xihuqu",
+        },
+      };
+      function deepClone(oldObj) {
+        if (typeof oldObj !== "object") {
+          return oldObj;
+        }
+        if (oldObj == null) {
+          return oldObj;
+        }
+        var newObj = Array.isArray(oldObj) ? [] : {};
+        for (var key in oldObj) {
+          if (typeof myx2[key] !== object) {
+            newObj[key] = oldObj[key];
+          } else {
+            newObj[key] = deepClone(oldObj[key]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
