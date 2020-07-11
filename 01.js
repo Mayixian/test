@@ -4,3 +4,4 @@ console.log("ahahha");
 console.log("ahahha");
 console.log("ahahha");
 console.log("ssss");
+console.log("啊,第四个功能");
